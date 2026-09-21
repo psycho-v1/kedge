@@ -5,6 +5,9 @@ never leaves the wallet view.
 
 Not a clone of the usual “same nonce + higher gas + speed-up” helpers.
 
+Host deny-list logic is the same surface as [splitkit](https://github.com/psycho-v1/splitkit).
+`js/vendor/splitkit.js` ships the IIFE. Inline `refuse()` still blocks `bdagscan` / `blockdag.works` even if the vendor file fails to load.
+
 ## Method
 
 1. Majority head-lock: each community RPC must share chain id 1404 and the
@@ -21,4 +24,4 @@ RPC set is fixed in `AGREEMENT.md`. bdagscan is refused.
 
 ## Files
 
-`index.html` · `AGREEMENT.md` · `NOTICE.md` · `LICENSE`
+`index.html` · `js/vendor/splitkit.js` · `AGREEMENT.md` · `NOTICE.md` · `LICENSE`
